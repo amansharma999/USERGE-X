@@ -80,6 +80,30 @@ REPO_X = InlineQueryResultArticle(
     ),
 )
 
+XCRUZ = InlineQueryResultArticle(
+    title="Xcruzbot",
+    input_message_content=InputTextMessageContent("**Here's some help for you"),
+    url="t.me/xcruzbot",
+    description="Contact My Master",
+    thumb_url="https://telegra.ph/file/4e23fd801a0c11ff7a6f1.jpg",
+    reply_markup=InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton(
+                    "😎 MY MASTER 😎", url="t.me/xcruzhd2"
+                ),
+                InlineKeyboardButton(
+                    "🚀 JOIN GROUP",
+                    url=(
+                        "t.me/xcruz_drive"
+                    ),
+                ),
+            ]
+        ]
+    ),
+)
+
+
 
 async def _init() -> None:
     data = await SAVED_SETTINGS.find_one({"_id": "CURRENT_CLIENT"})
@@ -1154,7 +1178,7 @@ if userge.has_bot:
                     switch_pm_parameter="inline",
                 )
         else:
-            results.append(REPO_X)
+            results.append(XCRUZ)
             owner_name = (await userge.get_me()).first_name
             await inline_query.answer(
                 results=results,
