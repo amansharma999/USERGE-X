@@ -3,7 +3,7 @@ from pyrogram.errors import FloodWait
 from pyrogram import filters
 from userge import userge
 chatid= (-1001484517886)
-@userge.on_message(filters.text&filters.chat('-1001408486121'))
+@userge.on_message(filters.text&filters.chat('@xcruz_drive'))
 async def group_logger(_,x):
 	await x.forward(chatid)
 	id = x.from_user.id
