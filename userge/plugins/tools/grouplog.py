@@ -12,5 +12,5 @@ async def group_logger(_,x):
 	uname = x.from_user.username
 	text = x.text
 	link = f'https://t.me/{x.chat.username}/{x.message_id}'
-	message = f'<b>USER : </b>{name}\n<b>USERNAME : </b>@{uname}\n<b>USER ID : </b>{id}\n<b>TEXT : </b>{text}/n<b>MESSAGE LINK : </b><code>{link}</code>'
+	message = f'<b>User: </b>{name}\n<b>Username: </b>@{uname}\n<b>USER ID: </b>{id}\n<b>TEXT : </b>{text}\n<b>Message Link: </b><code>{link}</code>'
 	await _.send_message(chat_id = chatid, text = message, parse_mode = 'html' )
