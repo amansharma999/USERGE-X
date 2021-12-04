@@ -11,7 +11,7 @@ google-auth-httplib2>=0.0.4
 google-auth-oauthlib>=0.4.2
 googletrans==3.1.0a0
 hachoir>=3.1.1
-heroku3>=4.2.3
+heroku3
 html-telegraph-poster>=0.2.31
 motor>=2.3.0
 oauth2client>=4.1.3
